@@ -1,0 +1,1980 @@
+{
+  "projectName": "cmsServices",
+  "description": null,
+  "auth": null,
+  "database": {
+    "_id": "6718ba9bc686b63c57a218e6",
+    "type": "database",
+    "name": "mongodb",
+    "label": "MongoDB",
+    "appName": "mongodb-database",
+    "pathToLogo": {
+      "s": "/assets/applications_logos/mongodb-s.png",
+      "l": "/assets/applications_logos/mongodb.png"
+    },
+    "configFileRelativePath": null,
+    "disabled": false,
+    "createdAt": "2024-10-23T08:58:03.145Z",
+    "updatedAt": "2024-10-23T08:58:03.145Z"
+  },
+  "stack": [
+    {
+      "appName": "nodejs-backend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/nodejs-s.png",
+        "l": "/assets/applications_logos/nodejs.png"
+      },
+      "type": "backend",
+      "name": "nodejs",
+      "label": "Node.js Express Feathers.js",
+      "versions": []
+    },
+    {
+      "appName": "react-frontend",
+      "environments": [
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "pathToLogo": {
+        "s": "/assets/applications_logos/react-s.png",
+        "l": "/assets/applications_logos/react.png"
+      },
+      "type": "frontend",
+      "name": "react",
+      "label": "React JavaScript",
+      "versions": []
+    }
+  ],
+  "services": [
+    {
+      "serviceName": "users",
+      "databaseName": "users",
+      "displayName": "Users",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [],
+      "schemaList": [
+        {
+          "fieldName": "name",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "description": "p",
+          "component": "p",
+          "label": "Name",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa8fb"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 100,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email",
+          "type": "String",
+          "unique": true,
+          "lowercase": true,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": true,
+          "description": "p",
+          "component": "p",
+          "label": "Email",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa8fc"
+          },
+          "isMultiple": false,
+          "min": 5,
+          "max": 150,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "status",
+          "type": "Boolean",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": false,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": false,
+          "editable": false,
+          "sortable": false,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "Status",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa8fd"
+          },
+          "isMultiple": false,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "default": true,
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "password",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": true,
+          "editable": false,
+          "sortable": false,
+          "required": true,
+          "description": "p",
+          "component": "p",
+          "label": "Password",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa8fe"
+          },
+          "isMultiple": false,
+          "min": 5,
+          "max": 300,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "remember_token",
+          "type": "Boolean",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": false,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": false,
+          "editable": false,
+          "sortable": false,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "Remeber Me",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa8ff"
+          },
+          "isMultiple": false,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "email_verified_at",
+          "type": "DateTime",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": false,
+          "display": false,
+          "displayOnEdit": false,
+          "displayOnSingle": false,
+          "displayOnDataTable": false,
+          "creatable": false,
+          "editable": false,
+          "sortable": false,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "Verified On",
+          "faker": {
+            "module": "datatype",
+            "subModule": "boolean",
+            "args": "1",
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa900"
+          },
+          "isMultiple": false,
+          "enum": [],
+          "index": false,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": true,
+      "seeder": [],
+      "skip": true,
+      "downloadable": true,
+      "uploadable": false,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    },
+    {
+      "serviceName": "cms",
+      "databaseName": "cms",
+      "displayName": "Cms",
+      "icon": "pi pi-cog",
+      "create": true,
+      "edit": true,
+      "delete": true,
+      "single": true,
+      "sidebar": [
+        "users"
+      ],
+      "schemaList": [
+        {
+          "fieldName": "name",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "name",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa902"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "category",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "category",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa903"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "path",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "path",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa904"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "image1",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "image1",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa905"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "image2",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "image2",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa906"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "headerContent",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "headerContent",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa907"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "bodyContent",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "bodyContent",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa908"
+          },
+          "isMultiple": false,
+          "min": 1,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "disclaimer",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "disclaimer",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa909"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "visible",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "visible",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa90a"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "bodyList",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "headerContent",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa90b"
+          },
+          "isMultiple": false,
+          "min": 2,
+          "max": 1051,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        },
+        {
+          "fieldName": "listPageTemplate",
+          "type": "String",
+          "unique": false,
+          "lowercase": false,
+          "uppercase": false,
+          "trim": true,
+          "display": true,
+          "displayOnEdit": true,
+          "displayOnSingle": true,
+          "displayOnDataTable": true,
+          "creatable": true,
+          "editable": true,
+          "sortable": true,
+          "required": false,
+          "description": "p",
+          "component": "p",
+          "label": "image1",
+          "faker": {
+            "skip": false,
+            "_id": "694a01f3a94df8ecb85fa90c"
+          },
+          "isMultiple": false,
+          "min": 1,
+          "max": 999,
+          "enum": [],
+          "index": true,
+          "autocomplete": false,
+          "lazy": false,
+          "reverse": false,
+          "morph": false,
+          "through": false,
+          "prefix": "",
+          "suffix": "",
+          "args": [],
+          "auditing": false,
+          "warehousing": false,
+          "searchable": false,
+          "mode": "currency",
+          "currency": {
+            "currency": "MYR",
+            "locale": "en-US"
+          },
+          "reference": {
+            "identifierFieldName": []
+          }
+        }
+      ],
+      "layout": false,
+      "seeder": [
+        {
+          "name": "features_core_infra_database",
+          "category": "Product ",
+          "path": "/features/core_infrastructure",
+          "image1": "file upload",
+          "image2": "file upload",
+          "headerContent": "Database management",
+          "bodyContent": "Basha Ai understands the kind of data management your app needs and sets up the infrastructure behind the scenes.",
+          "disclaimer": "This content is for informational purposes only and may include opinions. It should not be taken as professional advice.",
+          "visible": "YES"
+        },
+        {
+          "name": "features_core_infra_storage",
+          "category": "Product ",
+          "path": "/features/core_infrastructure",
+          "headerContent": "Storage",
+          "bodyContent": "If your app needs to handle files, Cloud Basha Ai makes it easy. Users can seamlessly upload and retrieve files like images and documents, with all the storage handled for you.",
+          "visible": "YES"
+        },
+        {
+          "name": "features_core_infra_email",
+          "category": "Product ",
+          "path": "/features/core_infrastructure",
+          "headerContent": "Email System",
+          "bodyContent": "Built-in email capabilities let your app send notifications, onboarding sequences, or marketing updates directly—without extra setup. ",
+          "visible": "YES"
+        },
+        {
+          "name": "features_core_infra_payment",
+          "category": "Product ",
+          "path": "/features/core_infrastructure",
+          "headerContent": "Payment processing",
+          "bodyContent": "Add checkout flows or subscription plans in seconds. Basha AI integrates with Stripe for secure, one-click payment processing.",
+          "visible": "YES"
+        },
+        {
+          "name": "features_core_infra_auto-generate",
+          "category": "Product ",
+          "path": "/features/core_infrastructure",
+          "headerContent": "Auto-generated API points",
+          "bodyContent": "Basha Ai automatically creates secure connections (APIs) for every part of your app's data and functionality, enabling your app to communicate effortlessly with other services.",
+          "visible": "YES"
+        },
+        {
+          "name": "features_ai_powered_embeddings",
+          "category": "Product ",
+          "path": "/features/ai_powered_features",
+          "headerContent": "Embeddings",
+          "bodyContent": "Convert text, images, and data into intelligent representations that power search, recommendations, and AI understanding."
+        },
+        {
+          "name": "features_ai_powered_rag",
+          "category": "Product ",
+          "path": "/features/ai_powered_features",
+          "headerContent": "RAG (Retrieval-Augmented Generation)",
+          "bodyContent": "Generate accurate, context-aware responses by combining your data with large language models."
+        },
+        {
+          "name": "features_ai_powered_vector",
+          "category": "Product ",
+          "path": "/features/ai_powered_features",
+          "headerContent": "Vector Indexing",
+          "bodyContent": "Store and search high-dimensional data instantly for fast, relevant, and semantic results."
+        },
+        {
+          "name": "features_ai_powered_curated_data",
+          "category": "Product ",
+          "path": "/features/ai_powered_features",
+          "headerContent": "Curated Databases",
+          "bodyContent": "Use pre-structured, domain-ready datasets optimized for AI-driven insights and responses."
+        },
+        {
+          "name": "integrations_code_bridge",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Code Bridge",
+          "bodyContent": "Combine AI-driven app development with structured project and service creation, enabling faster, simpler, and more complete end-to-end digital solutions from idea to deployment.",
+          "visible": "YES"
+        },
+        {
+          "name": "integrations_google_drive",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Google Drive",
+          "bodyContent": "Export files, store app-generated documents, and back up data directly to your Drive - all in one click.",
+          "visible": "YES"
+        },
+        {
+          "name": "integrations_goolgle_doc",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Google Doc",
+          "bodyContent": "Automate document creation, editing, and collaboration by connecting your app to Google Docs.",
+          "visible": "YES"
+        },
+        {
+          "name": "integrations_google_sheet",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Google Sheet",
+          "bodyContent": "Sync your app with Google Sheets to automate data entry, reporting, and spreadsheet workflows in one click.",
+          "visible": "YES"
+        },
+        {
+          "name": "integrations_gcp",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "GCP",
+          "bodyContent": "Deploy, scale, and manage your applications using Google Cloud’s secure and high-performance infrastructure."
+        },
+        {
+          "name": "integrations_aws",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "AWS",
+          "bodyContent": "Power your apps with scalable cloud services for storage, compute, databases, and AI workloads."
+        },
+        {
+          "name": "integrations_azure",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Azure",
+          "bodyContent": "Build, deploy, and manage enterprise-ready applications with Microsoft Azure cloud services."
+        },
+        {
+          "name": "integrations_docker",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Docker",
+          "bodyContent": "Package applications into lightweight containers for consistent deployment across environments."
+        },
+        {
+          "name": "integrations_github",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "GitHub",
+          "bodyContent": "Manage source code, version control, and CI/CD workflows with seamless GitHub integration."
+        },
+        {
+          "name": "integrations_fireBase",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Firebase",
+          "bodyContent": "Enable real-time databases, authentication, hosting, and analytics for modern apps in one place."
+        },
+        {
+          "name": "integrations_postman",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Postman",
+          "bodyContent": "Test, monitor, and automate API workflows to ensure reliable backend integrations."
+        },
+        {
+          "name": "integrations_vscode",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "VS code",
+          "bodyContent": "Edit, debug, and customize generated code using the world’s most popular developer IDE."
+        },
+        {
+          "name": "integrations_flutterFlow",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Flutter Flow",
+          "bodyContent": "Visually build cross-platform mobile and web apps with Flutter-based UI components."
+        },
+        {
+          "name": "integrations_pm2_plus",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "Pm2 Plus",
+          "bodyContent": "Monitor, manage, and keep your Node.js applications running reliably in production."
+        },
+        {
+          "name": "integrations_mlFlow",
+          "category": "Product ",
+          "path": "/integrations/connectors",
+          "headerContent": "ML Flow",
+          "bodyContent": "Track experiments, manage models, and streamline machine learning lifecycle management."
+        },
+        {
+          "name": "integrations_gemini",
+          "category": "Product ",
+          "path": "/integrations/manual_integrations",
+          "headerContent": "Gemini AI",
+          "bodyContent": "Securely generate and manage API keys, enabling reliable AI integration and seamless connectivity across our applications.",
+          "visible": "YES"
+        },
+        {
+          "name": "templates_financial",
+          "category": "Product ",
+          "path": "/templates/categories/financial",
+          "image1": "file upload",
+          "image2": "file upload",
+          "headerContent": "Financial",
+          "visible": "NO"
+        },
+        {
+          "name": "templates_marketing",
+          "category": "Product ",
+          "path": "/templates/categories/marketing",
+          "headerContent": "Marketing",
+          "visible": "NO"
+        },
+        {
+          "name": "templates_inventory",
+          "category": "Product ",
+          "path": "/templates/categories/inventory",
+          "headerContent": "Inventory",
+          "visible": "NO"
+        },
+        {
+          "name": "templates_human_resource",
+          "category": "Product ",
+          "path": "/templates/categories/human_resource",
+          "headerContent": "Human Resource",
+          "visible": "NO"
+        },
+        {
+          "name": "enterprise_business",
+          "category": "Product ",
+          "path": "/enterprise",
+          "headerContent": "Scale Your Business Impact",
+          "bodyContent": "Turn your experts into builders",
+          "bodyList": "Let non-technical teams solve their own workflow challenges or rapidly test new business models using natural language to create the exact tools they envision.",
+          "visible": "YES"
+        },
+        {
+          "name": "enterprise_business",
+          "category": "Product ",
+          "path": "/enterprise",
+          "bodyContent": "Accelerate your core roadmap",
+          "bodyList": "Free your senior devs from building internal tools and boilerplate APIs—and let them focus their talent on mission-critical code that drives your competitive advantage.",
+          "visible": "YES"
+        },
+        {
+          "name": "enterprise_security",
+          "category": "Product ",
+          "path": "/enterprise",
+          "headerContent": "Uncompromising security",
+          "bodyContent": "Enterprise SSO:",
+          "bodyList": "Integrate seamlessly with your identity provider using SAML, OAuth, and more.",
+          "visible": "YES"
+        },
+        {
+          "name": "enterprise_security",
+          "category": "Product ",
+          "path": "/enterprise",
+          "bodyContent": "Secure hosting:",
+          "bodyList": "All applications are hosted on private, protected, and continuously monitored infrastructure.",
+          "visible": "YES"
+        },
+        {
+          "name": "enterprise_security",
+          "category": "Product ",
+          "path": "/enterprise",
+          "bodyContent": "Granular permissions:",
+          "bodyList": "Define user and group roles to control who can view, edit, and manage applications.",
+          "visible": "YES"
+        },
+        {
+          "name": "enterprise_workspace",
+          "category": "Product ",
+          "path": "/enterprise",
+          "headerContent": "Build together with total confidence",
+          "bodyContent": "Full version history",
+          "bodyList": "Experiment freely and roll back to any previous version with a single click.",
+          "visible": "YES"
+        },
+        {
+          "name": "enterprise_workspace",
+          "category": "Product ",
+          "path": "/enterprise",
+          "bodyContent": "Shared project workspaces",
+          "bodyList": "Centralize efforts for collaborative work and clear stakeholder visibility.",
+          "visible": "YES"
+        },
+        {
+          "name": "enterprise_workspace",
+          "category": "Product ",
+          "path": "/enterprise",
+          "bodyContent": "Lifecycle management",
+          "bodyList": "Define a clear path to steer projects from draft to QA and on to production.",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "headerContent": "Elite",
+          "bodyContent": "$160/mo",
+          "bodyList": "Unlimited number of apps",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "In-app code edits",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Backend functions",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Connect a domain",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Free domain for 1 year",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "25 credits to share with a friend",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Github integration",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Early access to beta features",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Premium support",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "headerContent": "Pro",
+          "bodyContent": "$80/mo",
+          "bodyList": "Unlimited number of apps",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "In-app code edits",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Backend functions",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Connect a domain",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Free domain for 1 year",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "25 credits to share with a friend",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Github integration",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Early access to beta features",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "headerContent": "Builder",
+          "bodyContent": "$40/mo",
+          "bodyList": "Unlimited number of apps",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "In-app code edits",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Backend functions",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Connect a domain",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Free domain for 1 year",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "25 credits to share with a friend",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Github integration",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "headerContent": "Starter",
+          "bodyContent": "$16/mo",
+          "bodyList": "Unlimited number of apps",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "In-app code edits",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "headerContent": "Free",
+          "bodyContent": 0,
+          "bodyList": "Core Cloud Basha features",
+          "visible": "YES"
+        },
+        {
+          "name": "pricing_plans",
+          "category": "Product ",
+          "path": "/pricing",
+          "bodyList": "Authentication, database functionality, analytics.",
+          "visible": "YES"
+        },
+        {
+          "name": "roadmap_feature",
+          "category": "Product ",
+          "path": "/roadmap",
+          "headerContent": "Feature Roadmap",
+          "bodyContent": "Backlog",
+          "bodyList": "Give the options to export to github the code with api's backend",
+          "visible": "YES"
+        },
+        {
+          "name": "roadmap_feature",
+          "category": "Product ",
+          "path": "/roadmap",
+          "listPageTemplate": " ",
+          "bodyContent": "Next up",
+          "bodyList": "Add CSV file integration",
+          "visible": "YES"
+        },
+        {
+          "name": "roadmap_feature",
+          "category": "Product ",
+          "path": "/roadmap",
+          "bodyContent": "In Progress",
+          "bodyList": "Customized login/sign- up modal",
+          "visible": "YES"
+        },
+        {
+          "name": "roadmap_feature",
+          "category": "Product ",
+          "path": "/roadmap",
+          "bodyContent": "Done",
+          "bodyList": "Integration to Google Services",
+          "visible": "YES"
+        },
+        {
+          "name": "changelog",
+          "category": "Product ",
+          "path": "/changelog",
+          "headerContent": "Changelog",
+          "bodyContent": 45962,
+          "bodyList": "The App Template Marketplace",
+          "visible": "YES"
+        },
+        {
+          "name": "changelog",
+          "category": "Product ",
+          "path": "/changelog",
+          "bodyContent": 45931,
+          "bodyList": "Workspace-level SSO",
+          "visible": "YES"
+        },
+        {
+          "name": "changelog",
+          "category": "Product ",
+          "path": "/changelog",
+          "bodyList": "New Agent Builder",
+          "visible": "YES"
+        },
+        {
+          "name": "changelog",
+          "category": "Product ",
+          "path": "/changelog",
+          "bodyContent": 45901,
+          "bodyList": "Cloud Basha Partners",
+          "visible": "YES"
+        },
+        {
+          "name": "changelog",
+          "category": "Product ",
+          "path": "/changelog",
+          "bodyList": "Agentic Apps",
+          "visible": "YES"
+        },
+        {
+          "name": "changelog",
+          "category": "Product ",
+          "path": "/changelog",
+          "bodyList": "Referral Credits",
+          "visible": "YES"
+        },
+        {
+          "name": "feature_request_cloud_basha",
+          "category": "Product ",
+          "path": "/feature_request",
+          "headerContent": "Im fuming spent so much time on my app and after restarting 3 or 4 times I got and AI that could create a dam checklist i wanted.",
+          "bodyContent": "was almost done and just had to tweak one thing and the whole app got deleted.    Everything gone.    The AI got some Crap CRM created nothing what I had and not almost used up half of my credits to try restoring what I had and nothing.",
+          "visible": "YES"
+        },
+        {
+          "name": "feature_request_cloud_basha",
+          "category": "Product ",
+          "path": "/feature_request",
+          "headerContent": "No-Reply needs to follow the owners domain not Base44",
+          "bodyContent": "The no-reply@notifications.base44.com is a bit ridiculous. why is there no way to use my domain. no series business would allow some other businesses name to show up there. Is there no work around?",
+          "visible": "YES"
+        },
+        {
+          "name": "feature_request_cloud_basha",
+          "category": "Product ",
+          "path": "/feature_request",
+          "headerContent": "Video player and hosting missing - use Lovable for now",
+          "bodyContent": "I have used base 44 to build apps and very satisfied, however no support for native videos has made me switch to Lovable.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_productivity_apps",
+          "category": "productivity",
+          "path": "/use-cases/productivity",
+          "headerContent": "Turn words into apps",
+          "bodyContent": "Turning your productivity ideas into a real app using natural language. No code, No limits.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_productivity_launch",
+          "category": "productivity",
+          "path": "/use-cases/productivity",
+          "headerContent": "Launch in seconds",
+          "bodyContent": "Your productivity app is hosted and ready to go live the moment it's built. Share it instantly or connect your own domain.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_productivity_backend",
+          "category": "productivity",
+          "path": "/use-cases/productivity",
+          "headerContent": "Backend built-in",
+          "bodyContent": "We handle the heavy lifting—auth, databases, and storage are included. Your productivity apps won't just look good; they'll have the backend power to run your operations at scale.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_ecommerce-retail_apps",
+          "category": "ecommerce-retail",
+          "path": "/use-cases/ecommerce-retail",
+          "headerContent": "Turn words into apps",
+          "bodyContent": "Turning your e-commerce and retail ideas into a real app using natural language. No code, No limits.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_ecommerce-retail_launch",
+          "category": "ecommerce-retail",
+          "path": "/use-cases/ecommerce-retail",
+          "headerContent": "Launch in seconds",
+          "bodyContent": "Your e-commerce and retail app is hosted and ready to go live the moment it's built. Share it instantly or connect your own domain.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_ecommerce-retail_backend",
+          "category": "ecommerce-retail",
+          "path": "/use-cases/ecommerce-retail",
+          "headerContent": "Backend built-in",
+          "bodyContent": "We handle the heavy lifting—auth, databases, and storage are included. Your e-commerce and retail apps won't just look good; they'll have the backend power to run your operations at scale.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_finance_apps",
+          "category": "finance",
+          "path": "/use-cases/finance",
+          "headerContent": "Turn words into apps",
+          "bodyContent": "Turning your financial ideas into a real app using natural language. No code, No limits.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_finance_launch",
+          "category": "finance",
+          "path": "/use-cases/finance",
+          "headerContent": "Launch in seconds",
+          "bodyContent": "Your financial app is hosted and ready to go live the moment it's built. Share it instantly or connect your own domain.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_finance_backend",
+          "category": "finance",
+          "path": "/use-cases/finance",
+          "headerContent": "Backend built-in",
+          "bodyContent": "We handle the heavy lifting—auth, databases, and storage are included. Your financial apps won't just look good; they'll have the backend power to run your operations at scale.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_education_apps",
+          "category": "education",
+          "path": "/use-cases/education",
+          "headerContent": "Turn words into apps",
+          "bodyContent": "Turning your educational ideas into a real app using natural language. No code, No limits.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_education_launch",
+          "category": "education",
+          "path": "/use-cases/education",
+          "headerContent": "Launch in seconds",
+          "bodyContent": "Your educational app is hosted and ready to go live the moment it's built. Share it instantly or connect your own domain.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_education_backend",
+          "category": "education",
+          "path": "/use-cases/education",
+          "headerContent": "Backend built-in",
+          "bodyContent": "We handle the heavy lifting—auth, databases, and storage are included. Your educational apps won't just look good; they'll have the backend power to run your operations at scale.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_crm_apps",
+          "category": "crm",
+          "path": "/use-cases/crm",
+          "headerContent": "Turn words into apps",
+          "bodyContent": "Turning your CRM ideas into a real app using natural language. No code, No limits.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_crm_launch",
+          "category": "crm",
+          "path": "/use-cases/crm",
+          "headerContent": "Launch in seconds",
+          "bodyContent": "Your CRM app is hosted and ready to go live the moment it's built. Share it instantly or connect your own domain.",
+          "visible": "YES"
+        },
+        {
+          "name": "use-cases_crm_backend",
+          "category": "crm",
+          "path": "/use-cases/crm",
+          "headerContent": "Backend built-in",
+          "bodyContent": "We handle the heavy lifting—auth, databases, and storage are included. Your CRM apps won't just look good; they'll have the backend power to run your operations at scale.",
+          "visible": "YES"
+        },
+        {
+          "name": "about_us",
+          "category": "Company",
+          "path": "/aboutUs",
+          "headerContent": "About Us",
+          "bodyContent": "At CloudBasha AI, we believe that anyone with an idea should be able to build an app without needing deep technical knowledge.",
+          "visible": "YES"
+        },
+        {
+          "name": "about_us",
+          "category": "Company",
+          "path": "/aboutUs",
+          "bodyContent": "Our Mission",
+          "bodyList": "Our mission is simple: turn ideas into fully functional apps using the power of AI.",
+          "visible": "YES"
+        },
+        {
+          "name": "about_us",
+          "category": "Company",
+          "path": "/aboutUs",
+          "bodyList": "We created Cloud Basha AI to remove the complexity of traditional development. No long timelines, no complicated tools, no technical barriers. Just a single prompt and your app begins to take shape with clean, editable code you can refine and deploy instantly.\n\nOur platform blends intelligent conversation with advanced code generation to give you a seamless building experience. Whether you're a business owner, startup founder, enterprise team, or independent creator, Cloud Basha AI helps you accelerate development and bring ideas to life faster than ever.\n\nEvery day, innovators, companies, and creators trust Cloud Basha AI to build internal tools, automate workflows, launch new products, and explore fresh concepts. We’re proud to support clients across industries as they transform their ideas into real, usable applications.\n\nAt Cloud Basha AI, we’re not just generating code, we're empowering a new way of creating.\n\nA future where building software is simple, fast, and accessible to everyone.\n\nLet’s build the future, one idea at a time!",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "headerContent": "Join our affiliate program",
+          "bodyContent": "Become a Cloud Basha affiliate leader! Share your unique referral link, empower creators to join our community, and earn a highly competitive commission for each new subscriber you recruit.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "headerContent": "Reasons to join our program",
+          "bodyContent": "Earn while empowering more creators to turn their ideas into reality.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "bodyContent": "Get a RM20 commission",
+          "bodyList": "High-performing affiliates have the opportunity to earn even more.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "bodyContent": "Unlimited referrals with fast payouts",
+          "bodyList": "Get a personal dashboard to track how you’ve helped us grow over time.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "bodyContent": "Unlock expert support",
+          "bodyList": "Unlimited referrals with fast payouts Have questions or need help? Our dedicated affiliate team is always here to back you up.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "headerContent": "How it works",
+          "bodyContent": "Here's what you can expect when you become a Base44 affiliate.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "bodyContent": "Sign up",
+          "bodyList": "Join the program, get a unique referral link, and start as soon as you’re approved.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "bodyContent": "Share",
+          "bodyList": "Promote your Cloud Basha projects to your network and include your personal link.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "bodyContent": "Track",
+          "bodyList": "Monitor your referrals and conversions in real-time to see who you’ve inspired.",
+          "visible": "YES"
+        },
+        {
+          "name": "affiliates_program",
+          "category": "Company",
+          "path": "/affiliates",
+          "bodyContent": "Earn",
+          "bodyList": "Earn a Rm20 commission on referrals that convert to paid users within a month from the lock in day.",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_customer_care_tech_solution",
+          "category": "Company",
+          "path": "/careers/customer-care",
+          "headerContent": "Customer Care",
+          "bodyContent": "Technical Solution Team Leader",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_customer_care_tech_support",
+          "category": "Company",
+          "path": "/careers/customer-care",
+          "bodyContent": "Technical Support Specialist",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_data_analyst",
+          "category": "Company",
+          "path": "/careers/data",
+          "headerContent": "Data",
+          "bodyContent": "Data Analyst",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_marketing_brand_advocate",
+          "category": "Company",
+          "path": "/careers/maketing",
+          "headerContent": "Marketing",
+          "bodyContent": "Brand Advocate, Builder Relations",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_marketing_brand_relations",
+          "category": "Company",
+          "path": "/careers/maketing",
+          "bodyContent": "Builder Relations Advocate",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_marketing_marketer",
+          "category": "Company",
+          "path": "/careers/maketing",
+          "bodyContent": "Full Stack Marketer",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_marketing_ai_builder",
+          "category": "Company",
+          "path": "/careers/maketing",
+          "bodyContent": "Marketing AI Builder",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_marketing_brand_designer",
+          "category": "Company",
+          "path": "/careers/maketing",
+          "bodyContent": "Senior Web & Brand Designer",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_R&D_backend",
+          "category": "Company",
+          "path": "/careers/r&d",
+          "headerContent": "R&D",
+          "bodyContent": "Backend Developer",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_R&D_fullstack",
+          "category": "Company",
+          "path": "/careers/r&d",
+          "bodyContent": "Fullstack Developer",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_R&D_fullstack_frontend",
+          "category": "Company",
+          "path": "/careers/r&d",
+          "bodyContent": "Fullstack Developer (Frontend-Focused)",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_sales_account_executive",
+          "category": "Company",
+          "path": "/careers/sales",
+          "headerContent": "Sales & AM",
+          "bodyContent": "Account Executive",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_sales_account_manager",
+          "category": "Company",
+          "path": "/careers/sales",
+          "bodyContent": "Account Manager",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_sales_executive",
+          "category": "Company",
+          "path": "/careers/sales",
+          "bodyContent": "Enterprise Account Executive",
+          "visible": "YES"
+        },
+        {
+          "name": "careers_sales_solution_engineer",
+          "category": "Company",
+          "path": "/careers/sales",
+          "bodyContent": "Solution Engineer",
+          "visible": "YES"
+        },
+        {
+          "name": "codebridge_components",
+          "category": "Component",
+          "path": "/components/People",
+          "headerContent": "People",
+          "bodyContent": "Manage your organization’s people setup in one place, including job structure, reporting hierarchy, staff details, and access permissions.",
+          "visible": "YES"
+        },
+        {
+          "name": "codebridge_components",
+          "category": "Component",
+          "path": "/components/Data",
+          "headerContent": "Data",
+          "bodyContent": "A central place to upload, store, and manage documents, files, and reusable email templates for the system.",
+          "visible": "YES"
+        },
+        {
+          "name": "codebridge_components",
+          "category": "Component",
+          "path": "/components/Gen Ai",
+          "headerContent": "Gen Ai",
+          "bodyContent": "A workspace to chat with AI, manage reusable prompts, and track usage.",
+          "visible": "YES"
+        },
+        {
+          "name": "codebridge_components",
+          "category": "Component",
+          "path": "/components/Users",
+          "headerContent": "Users",
+          "bodyContent": "Manage all users in the system. Users are unique email address and have an access to the system.",
+          "visible": "YES"
+        },
+        {
+          "name": "codebridge_components",
+          "category": "Component",
+          "path": "/components/Company",
+          "headerContent": "Company",
+          "bodyContent": "A place to set up and maintain your company’s organizational structure and contact information.",
+          "visible": "YES"
+        },
+        {
+          "name": "codebridge_components",
+          "category": "Component",
+          "path": "/components/Admin",
+          "headerContent": "Admin",
+          "bodyContent": "A place to track data import and email job runs, and review mail/error logs when something fails.",
+          "visible": "YES"
+        },
+        {
+          "name": "app_templates",
+          "category": "Template",
+          "path": "/template/CRM",
+          "headerContent": "CRM",
+          "bodyContent": "A CRM app helps you track and manage customer information, interactions, and deals so you can follow up faster and close more business."
+        },
+        {
+          "name": "app_templates",
+          "category": "Template",
+          "path": "/template/HRM",
+          "headerContent": "HRM",
+          "bodyContent": "Manages employee records, attendance, leave, payroll, and HR workflows in one system."
+        },
+        {
+          "name": "app_templates",
+          "category": "Template",
+          "path": "/template/E-Invoicing",
+          "headerContent": "E-Invoicing",
+          "bodyContent": "Creates, sends, and tracks compliant digital invoices with automated validation and reporting."
+        },
+        {
+          "name": "app_templates",
+          "category": "Template",
+          "path": "/template/PAR",
+          "headerContent": "PAR",
+          "bodyContent": "Records and manages purchase/approval requests from submission through review and decision."
+        },
+        {
+          "name": "app_templates",
+          "category": "Template",
+          "path": "/template/Maintenance",
+          "headerContent": "Maintenance",
+          "bodyContent": "Schedules and tracks equipment/assets, breakdowns, work orders, and servicing history."
+        },
+        {
+          "name": "app_templates",
+          "category": "Template",
+          "path": "/template/E-Commerce",
+          "headerContent": "E-Commerce",
+          "bodyContent": "Runs an online store with product listings, orders, payments, and delivery tracking."
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        },
+        {
+          "visible": "YES"
+        }
+      ],
+      "skip": false,
+      "downloadable": true,
+      "uploadable": true,
+      "sharable": false,
+      "ai": false,
+      "warehouse": false
+    }
+  ]
+}
