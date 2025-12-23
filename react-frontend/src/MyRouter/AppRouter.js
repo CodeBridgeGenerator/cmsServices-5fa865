@@ -2,9 +2,9 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { connect } from "react-redux";
 import ProtectedRoute from "./ProtectedRoute";
-
 import SingleCmsPage from "../components/app_components/CmsPage/SingleCmsPage";
 import CmProjectLayoutPage from "../components/app_components/CmsPage/CmProjectLayoutPage";
+
 //  ~cb-add-import~
 
 const AppRouter = () => {
@@ -12,9 +12,8 @@ const AppRouter = () => {
     <Routes>
       {/* ~cb-add-unprotected-route~ */}
       <Route element={<ProtectedRoute redirectPath={"/login"} />}>
-        
-<Route path="/cms/:singleCmsId" exact element={<SingleCmsPage />} />
-<Route path="/cms" exact element={<CmProjectLayoutPage />} />
+        <Route path="/cms/:singleCmsId" exact element={<SingleCmsPage />} />
+        <Route path="/cms" exact element={<CmProjectLayoutPage />} />
         {/* ~cb-add-protected-route~ */}
       </Route>
     </Routes>

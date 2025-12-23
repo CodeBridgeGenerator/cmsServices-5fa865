@@ -108,12 +108,14 @@ export const deleteMany = async (params) => {
 export const excludeLocations = [
   "/settings",
   "/account",
+  "/home",
   "/",
   "/login-faq",
   "/signup",
   "/login",
   "/login-faq",
-  /^\/reset\/[a-f0-9]{24}$/
+  /^\/reset\/[a-f0-9]{24}$/,
+  /^\/web\/.*/
 ];
 
 export default {

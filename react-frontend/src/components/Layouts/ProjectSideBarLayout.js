@@ -30,6 +30,7 @@ const ProjectSideBarLayout = (props) => {
         // if (currentCache?.selectedUser) {
         let selectedProfileId = localStorage.getItem("selectedUser_" + tabId);
         // Fetch profile data for the selected profile ID
+        if(!selectedProfileId) return;
         const profileResponse = await client
           .service("profiles")
           .get(selectedProfileId, {

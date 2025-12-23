@@ -1,5 +1,5 @@
 import React from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import { connect } from "react-redux";
 import ProtectedRoute from "./ProtectedRoute";
 import NoMatch from "./NoMatch";
@@ -13,12 +13,18 @@ import DashboardWelcome from "../components/Dashboard/DashboardWelcome";
 import Account from "../components/cb_components/Account/Account";
 import CBRouter from "./CBRouter";
 import AppRouter from "./AppRouter";
+import HomePage from "../components/web_components/HomePage/HomePage";
+import WebRouter from "./WebRouter";
 
 //  ~cb-add-import~
 
 const MyRouter = (props) => {
+    const location = useLocation();
+    console.log("loc", location)
   return (
     <Routes>
+      <Route path="/home" exact element={<HomePage />} />
+      <Route path="/web/*" exact element={<WebRouter />} />
       <Route
         path="/"
         exact
@@ -31,10 +37,11 @@ const MyRouter = (props) => {
               </ProjectSideBarLayout>{" "}
             </div>
           ) : (
-            <LoginPage />
+            <HomePage />
           )
         }
       />
+
       <Route
         path="/login"
         exact
@@ -60,7 +67,7 @@ const MyRouter = (props) => {
       <Route path="/maintenance" exact element={<MaintenancePage />} />
       <Route path="/login-faq" exact element={<LoginFaqPage />} />
 
-      <Route element={<ProtectedRoute redirectPath={"/login"} />}>
+      <Route element={<ProtectedRoute redirectPath={"/home"} />}>
         <Route path="/project" exact element={<DashboardWelcome />} />
         {/* user details */}
         <Route path="/account" exact element={<Account />} />

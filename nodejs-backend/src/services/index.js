@@ -4,5 +4,5 @@ const cms = require("./cms/cms.service.js");
 // eslint-disable-next-line no-unused-vars
 module.exports = function (app) {
   app.configure(cms);
-    // ~cb-add-configure-service-name~
+  // ~cb-add-configure-service-name~
 };

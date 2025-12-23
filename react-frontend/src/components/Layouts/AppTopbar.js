@@ -252,7 +252,7 @@ const AppTopbar = (props) => {
       }
     };
 
-    fetchProfiles();
+    props.isLoggedIn ? fetchProfiles() : null;
   }, [props.user]);
 
   // Fetch and cache image URLs

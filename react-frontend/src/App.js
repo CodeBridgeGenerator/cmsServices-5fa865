@@ -38,30 +38,32 @@ const App = ({ isLoggedIn }) => {
     }
     return false;
   });
+  console.log(location, isExcluded);
+
   return (
     <Provider store={store}>
       <AppTopbar showSideMenuButton={showSideMenuButton} />
 
       <MainLayout>
-      {!isExcluded && (
-        <div
-          className={classNames("flex min-h-[calc(100vh-5rem)] bg-white", {
-            "mt-20": !isExcluded || !regex.test(location.pathname),
-          })}
-        >
-          <ProjectSideBarLayout />
+        {!isExcluded && (
+          <div
+            className={classNames("flex min-h-[calc(100vh-5rem)] bg-white", {
+              "mt-20": !isExcluded || !regex.test(location.pathname),
+            })}
+          >
+            <ProjectSideBarLayout />
 
+            <div className="flex-1 ml-2" style={{ overflowX: "auto" }}>
+              <MyRouter isLoggedIn={isLoggedIn} />
+            </div>
+          </div>
+        )}
+        {isExcluded && (
           <div className="flex-1 ml-2" style={{ overflowX: "auto" }}>
             <MyRouter isLoggedIn={isLoggedIn} />
           </div>
-        </div>
-      )}
-      {isExcluded && (
-        <div className="flex-1 ml-2" style={{ overflowX: "auto" }}>
-          <MyRouter isLoggedIn={isLoggedIn} />
-        </div>
-      )}
-    </MainLayout>
+        )}
+      </MainLayout>
 
       <LoadingWrapper />
       <ToastWrapper />

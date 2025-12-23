@@ -8,8 +8,6 @@ const PageWrapper = (props) => {
   const params = useParams();
 
   useEffect(() => {
-    // console.log(location);
-    console.log(props.user);
     const data = {
       pageName: location.pathname,
       ...getNavigatorInfo(),
@@ -18,7 +16,7 @@ const PageWrapper = (props) => {
       userId: null,
     };
     // console.log(data)
-    createRecord(data);
+    // createRecord(data);
   }, []);
 
   const createRecord =  (data) =>  {
