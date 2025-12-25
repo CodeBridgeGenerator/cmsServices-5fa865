@@ -27,7 +27,7 @@ import PageWrapper from "./MyRouter/wrappers/PageWrapper";
 
 const App = ({ isLoggedIn }) => {
   const location = useLocation();
-  const regex = /^\/reseta\/[a-f0-9]{24}$/;
+  const regex = /^\/reset\/[a-f0-9]{24}$/;
   const showSideMenuButton = true;
 
   const isExcluded = excludeLocations.some((exclude) => {
@@ -38,7 +38,7 @@ const App = ({ isLoggedIn }) => {
     }
     return false;
   });
-  console.log(location, isExcluded);
+  // console.log(location, isExcluded);
 
   return (
     <Provider store={store}>

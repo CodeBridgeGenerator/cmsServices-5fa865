@@ -1,17 +1,26 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
 import { useLocation } from "react-router-dom";
+import { excludeLocations } from "../../utils";
 
 const StartupWrapper = (props) => {
   const location = useLocation();
-  const regex = /^\/reset\/[a-f0-9]{24}$/;
 
   useEffect(() => {
+    const isExcluded = excludeLocations.some((exclude) => {
+      if (typeof exclude === "string") {
+        return exclude === location.pathname;
+      } else if (exclude instanceof RegExp) {
+        return exclude.test(location.pathname);
+      }
+      return false;
+    });
+
     // runs once
-    if (!regex.test(location.pathname)) {
-      // props.reAuth().catch((error) => {
-      //   console.debug("error", error);
-      // });
+    if (!isExcluded) {
+      props.reAuth().catch((error) => {
+        console.debug("error", error);
+      });
     }
   }, []);
 

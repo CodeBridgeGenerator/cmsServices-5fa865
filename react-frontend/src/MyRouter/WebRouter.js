@@ -9,6 +9,7 @@ import IntegrationsPage from "../components/web_components/ProductPage/Integrati
 import RoadMapPage from "../components/web_components/ProductPage/RoadMapPage";
 import ChangeLogPage from "../components/web_components/ProductPage/ChangeLogPage";
 import AppTemplatesPage from "../components/web_components/ProductPage/AppTemplatesPage";
+import WildCardListPage from "../components/web_components/ProductPage/WildCardListPage";
 
 //  ~cb-add-import~
 
@@ -18,19 +19,20 @@ const WebRouter = () => {
   return (
     <Routes>
       {/* ~cb-add-unprotected-route~ */}
-      <Route path="/features" exact element={<FeaturesListPage />} />
+      <Route path="/features/list" exact element={<FeaturesListPage />} />
       <Route
         path="/integrations/list"
         exact
         element={<IntegrationsPage />}
       />
-      <Route path="/roadmap/list" exact element={<RoadMapPage />} />
+      {/* <Route path="/roadmap/list" exact element={<RoadMapPage />} /> */}
       <Route path="/changelog/list" exact element={<ChangeLogPage />} />
       <Route
         path="/apptemplates/list"
         exact
         element={<AppTemplatesPage />}
       />
+      <Route path="/*" exact element={<WildCardListPage />} />
     </Routes>
   );
 };

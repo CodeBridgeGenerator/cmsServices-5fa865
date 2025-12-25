@@ -13,7 +13,7 @@ const HeaderPage = (props) => {
     {
       name: "features",
       headerContent: "explore everthing our platform has to offer",
-      link: "/web/features",
+      link: "/web/features/list",
     },
     {
       name: "integrations",
@@ -92,8 +92,8 @@ const HeaderPage = (props) => {
                     <span className="block font-normal text-2xl mb-4 text-white">
                       Products
                     </span>
-                    <p className="line-height-3 m-0 text-gray-400">
-                      {/* Products available */}
+                    <p key="product" className="line-height-3 m-0 text-gray-400">
+                      Products
                     </p>
                   </div>
                   <div className="flex flex-wrap border-bottom-1 border-gray-700 pb-3 mb-3">

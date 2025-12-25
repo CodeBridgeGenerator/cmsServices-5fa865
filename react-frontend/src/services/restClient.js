@@ -58,9 +58,10 @@ app.hooks({
             isTokenExpired(token)) {
           localStorage.removeItem('feathers-jwt');
           
-          // if (!window.location.pathname.startsWith('/login')) {
-          //   window.location.href = '/login?sessionExpired=true';
-          // }
+          // Comment this out to allow web pages to accessed
+          if (!window.location.pathname.startsWith('/login')) {
+            window.location.href = '/login?sessionExpired=true';
+          }
         }
         return context;
       }

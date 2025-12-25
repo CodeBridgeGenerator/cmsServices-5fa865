@@ -20,7 +20,7 @@ import WebRouter from "./WebRouter";
 
 const MyRouter = (props) => {
     const location = useLocation();
-    console.log("loc", location)
+    // console.log("loc", location)
   return (
     <Routes>
       <Route path="/home" exact element={<HomePage />} />
